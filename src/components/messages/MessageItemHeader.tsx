@@ -15,10 +15,10 @@ export const MessageItemHeader: FC<Props> = ({ message }) => {
       <span
         className="authorName"
         style={{
-          color: user?.id === message.author.id ? '#989898' : '#5E8BFF',
+          color: user?.id === message.author.id ? '#5E8BFF' : '#989898',
         }}
       >
-        {message.author.firstName} {message.author.lastName}
+        {message.author.username}
       </span>
       <span className="time">
         {formatRelative(new Date(message.createdAt), new Date())}

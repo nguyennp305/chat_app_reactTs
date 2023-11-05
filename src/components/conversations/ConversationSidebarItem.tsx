@@ -50,7 +50,7 @@ export const ConversationSidebarItem: React.FC<Props> = ({ conversation }) => {
         />
         <ConversationSidebarItemDetails>
           <span className="conversationName">
-            {`${recipient?.firstName} ${recipient?.lastName}`}
+            {`${recipient?.username}`}
           </span>
           <span className="conversationLastMessage">
             {lastMessageContent()}

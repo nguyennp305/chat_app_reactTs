@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { AppDispatch, RootState } from '../../store';
@@ -26,8 +26,10 @@ import {
 } from '../../store/messageContainerSlice';
 import { SystemMessage } from './system/SystemMessage';
 import { SystemMessageList } from './system/SystemMessageList';
+import { AuthContext } from '../../utils/context/AuthContext';
 
 export const MessageContainer = () => {
+  const { user } = useContext(AuthContext)
   const { id } = useParams();
   const dispatch = useDispatch<AppDispatch>();
   const conversationMessages = useSelector((state: RootState) =>
@@ -77,7 +79,9 @@ export const MessageContainer = () => {
       messages.length === index + 1 ||
       currentMessage.author.id !== nextMessage.author.id;
     return (
-      <MessageItemContainer
+      <div className={user?.id === currentMessage?.author?.id ? 'author-mess' : 'friend-mess'}
+      style={{display: 'flex', flexDirection: user?.id === currentMessage?.author?.id ? 'row-reverse': 'row'}}>
+        <MessageItemContainer
         key={message.id}
         onContextMenu={(e) => onContextMenu(e, message)}
       >
@@ -99,6 +103,7 @@ export const MessageContainer = () => {
           />
         )}
       </MessageItemContainer>
+      </div>
     );
   };
 
