@@ -29,7 +29,8 @@ export const LoginForm = () => {
       console.log('Success');
       socket.connect();
       console.log(socket.connected);
-      navigate('/conversations');
+      // navigate('/conversations');
+      navigate('/welcomePage')
     } catch (err) {
       console.log(socket.connected);
       console.log(err);

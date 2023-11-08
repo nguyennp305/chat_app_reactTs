@@ -27,6 +27,7 @@ import { SettingsAppearancePage } from './pages/settings/SettingsAppearancePage'
 import { CallsPage } from './pages/calls/CallsPage';
 import { CurrentCallPage } from './pages/calls/CurrentCallPage';
 import { Test } from './pages/test/Test';
+import { WelcomePage } from './pages/WelcomePage';
 
 enableMapSet();
 
@@ -57,8 +58,10 @@ function App() {
   return (
     <AppWithProviders user={user} setUser={setUser} socket={socket}>
       <Routes>
-        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/welcomePage" element={<WelcomePage />} />
+        <Route path="/" element={<LoginPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route element={<AuthenticatedRoute children={<AppPage />} />}>
           <Route path="conversations" element={<ConversationPage />}>
             <Route
