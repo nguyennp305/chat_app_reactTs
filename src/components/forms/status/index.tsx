@@ -17,7 +17,7 @@ type Props = {
 
 export const UpdateUserStatusForm: FC<Props> = ({ setShowModal }) => {
   const { user } = useContext(AuthContext);
-  const { success, error } = useToast({ theme: 'dark' });
+  const { success, error } = useToast({ theme: 'light' });
   const [statusMessage, setStatusMessage] = useState(
     user?.presence?.statusMessage || ''
   );

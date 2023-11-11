@@ -20,8 +20,8 @@ export const InputField = styled.input`
   font-family: "Inter";
   outline: none;
   border: none;
-  background-color: inherit;
-  color: #fff;
+  background-color: #e3d8d8;
+  color: #000;
   font-size: 18px;
   font-weight: 500;
   width: 100%;
@@ -34,7 +34,7 @@ export const InputField = styled.input`
 `;
 
 export const InputContainer = styled.div<InputContainerProps>`
-  background-color: ${(prop) => prop.backgroundColor || "#131313"};
+  // background-color: ${(prop) => prop.backgroundColor || "#131313"};
   padding: 12px 16px;
   border-radius: 10px;
   width: 100%;
@@ -57,7 +57,7 @@ export const InputContainerHeader = styled.div`
 
 export const InputLabel = styled.label`
   display: block;
-  color: #8f8f8f;
+  color: #000;
   font-size: 14px;
   margin: 4px 0;
 `;
@@ -95,7 +95,7 @@ export const Button = styled.button`
 `;
 
 export const Page = styled.div<PageProps>`
-  background-color: #1a1a1a;
+  background-color: #fff;
   height: 100%;
   width: 100%;
   display: ${(props) => props.display};
@@ -173,7 +173,7 @@ export const ConversationSidebarItemDetails = styled.div`
 export const OverlayStyle = styled.div`
   height: 100%;
   width: 100%;
-  background-color: #000000e3;
+  background-color: #6f6d6de3;
   position: fixed;
   display: flex;
   top: 0;
@@ -189,7 +189,7 @@ type ModalProps = Partial<{
 
 export const ModalContainerStyle = styled.div<ModalProps>`
   position: relative;
-  background-color: #121212;
+  background-color: #ffffff;
   width: 650px;
   box-sizing: border-box;
   border-radius: 10px;
@@ -219,8 +219,8 @@ export const TextField = styled.textarea`
   font-family: "Inter";
   outline: none;
   border: none;
-  background-color: inherit;
-  color: #fff;
+  background-color: #e3d8d8;
+  color: #000;
   font-size: 18px;
   width: 100%;
   box-sizing: border-box;
@@ -586,7 +586,7 @@ export const SidebarContainerItemContent = styled.div`
 
 export const RecipientResultContainerStyle = styled.div`
   position: absolute;
-  background-color: #161616;
+  // background-color: #161616;
   right: 0;
   left: 0;
   margin: 4px 24px;

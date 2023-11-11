@@ -26,7 +26,7 @@ export const EditGroupForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [file, setFile] = useState<File>();
   const [newGroupTitle, setNewGroupName] = useState(group?.title || '');
-  const { success, error } = useToast({ theme: 'dark' });
+  const { success, error } = useToast({ theme: 'light' });
   const isStateChanged = useCallback(
     () => file || group?.title !== newGroupTitle,
     [file, newGroupTitle, group?.title]

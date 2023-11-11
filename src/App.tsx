@@ -1,33 +1,34 @@
-import { PropsWithChildren, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { Socket } from 'socket.io-client';
-import { AuthenticatedRoute } from './components/AuthenticatedRoute';
-import { ConversationChannelPage } from './pages/conversations/ConversationChannelPage';
-import { ConversationPage } from './pages/conversations/ConversationPage';
-import { LoginPage } from './pages/LoginPage';
-import { RegisterPage } from './pages/RegisterPage';
-import { AuthContext } from './utils/context/AuthContext';
-import { socket, SocketContext } from './utils/context/SocketContext';
-import { User } from './utils/types';
-import { Provider as ReduxProvider } from 'react-redux';
-import { store } from './store';
-import { enableMapSet } from 'immer';
-import { GroupChannelPage } from './pages/group/GroupChannelPage';
-import { GroupPage } from './pages/group/GroupPage';
-import { AppPage } from './pages/AppPage';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { ConversationPageGuard } from './guards/ConversationPageGuard';
-import { GroupPageGuard } from './guards/GroupPageGuard';
-import { FriendsLayoutPage } from './pages/friends/FriendsLayoutPage';
-import { FriendRequestPage } from './pages/friends/FriendRequestPage';
-import { SettingsPage } from './pages/settings/SettingsPage';
-import { SettingsProfilePage } from './pages/settings/SettingsProfilePage';
-import { SettingsAppearancePage } from './pages/settings/SettingsAppearancePage';
-import { CallsPage } from './pages/calls/CallsPage';
-import { CurrentCallPage } from './pages/calls/CurrentCallPage';
-import { Test } from './pages/test/Test';
-import { WelcomePage } from './pages/WelcomePage';
+import { PropsWithChildren, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import { Socket } from "socket.io-client";
+import { AuthenticatedRoute } from "./components/AuthenticatedRoute";
+import { ConversationChannelPage } from "./pages/conversations/ConversationChannelPage";
+import { ConversationPage } from "./pages/conversations/ConversationPage";
+import { LoginPage } from "./pages/LoginPage";
+import { RegisterPage } from "./pages/RegisterPage";
+import { AuthContext } from "./utils/context/AuthContext";
+import { socket, SocketContext } from "./utils/context/SocketContext";
+import { User } from "./utils/types";
+import { Provider as ReduxProvider } from "react-redux";
+import { store } from "./store";
+import { enableMapSet } from "immer";
+import { GroupChannelPage } from "./pages/group/GroupChannelPage";
+import { GroupPage } from "./pages/group/GroupPage";
+import { AppPage } from "./pages/AppPage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ConversationPageGuard } from "./guards/ConversationPageGuard";
+import { GroupPageGuard } from "./guards/GroupPageGuard";
+import { FriendsLayoutPage } from "./pages/friends/FriendsLayoutPage";
+import { FriendRequestPage } from "./pages/friends/FriendRequestPage";
+import { SettingsPage } from "./pages/settings/SettingsPage";
+import { SettingsProfilePage } from "./pages/settings/SettingsProfilePage";
+import { SettingsAppearancePage } from "./pages/settings/SettingsAppearancePage";
+import { CallsPage } from "./pages/calls/CallsPage";
+import { CurrentCallPage } from "./pages/calls/CurrentCallPage";
+import { Test } from "./pages/test/Test";
+import { WelcomePage } from "./pages/WelcomePage";
+import { HeaderAllPages } from "./components/headers-al-pages/HeaderAllPages";
 
 enableMapSet();
 
@@ -57,12 +58,13 @@ function App() {
   const [user, setUser] = useState<User>();
   return (
     <AppWithProviders user={user} setUser={setUser} socket={socket}>
+      <HeaderAllPages />
       <Routes>
-        <Route path="/welcomePage" element={<WelcomePage />} />
         <Route path="/" element={<LoginPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route element={<AuthenticatedRoute children={<AppPage />} />}>
+          <Route path="/welcomePage" element={<WelcomePage />} />
           <Route path="conversations" element={<ConversationPage />}>
             <Route
               path=":id"
@@ -89,7 +91,7 @@ function App() {
             <Route path="current" element={<CurrentCallPage />} />
           </Route>
         </Route>
-        <Route path='/test' element={<Test />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
       <ToastContainer theme="dark" />
     </AppWithProviders>

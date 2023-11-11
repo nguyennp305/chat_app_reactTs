@@ -5,7 +5,7 @@ import {
 } from '../styleTypes';
 
 export const FriendsPageStyle = styled.div`
-  background-color: #101010;
+  background-color: #fff;
   height: 100%;
   width: 100%;
 `;
@@ -56,6 +56,8 @@ export const FriendListItemContainer = styled.div<FriendListItemContainerProps>`
   gap: 20px;
   padding: 14px 0;
   border-bottom: 1px solid #181818;
+  margin-bottom: 10px;
+  background-color: #e3d8d8;
   &:last-child {
     border-bottom: unset;
   }

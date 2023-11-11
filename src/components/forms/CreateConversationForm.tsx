@@ -79,7 +79,7 @@ export const CreateConversationForm: FC<Props> = ({ setShowModal }) => {
         />
       )}
       <section className={styles.message}>
-        <InputContainer backgroundColor="#161616">
+        <InputContainer>
           <InputLabel>Message (optional)</InputLabel>
           <TextField
             value={message}

@@ -12,9 +12,9 @@ html,
 
 body,
 html {
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
   font-family: 'Inter';
-  color: #fff !important;
+  /* color: #fff !important; */
 }
 
 h1 {

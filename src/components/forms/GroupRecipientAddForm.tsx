@@ -13,7 +13,7 @@ import styles from './index.module.scss';
 export const GroupRecipientAddForm = () => {
   const { id: groupId } = useParams();
   const [username, setUsername] = useState('');
-  const { success, error } = useToast({ theme: 'dark' });
+  const { success, error } = useToast({ theme: 'light' });
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

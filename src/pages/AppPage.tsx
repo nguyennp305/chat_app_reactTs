@@ -42,7 +42,7 @@ export const AppPage = () => {
   const navigate = useNavigate();
   const { peer, call, isReceivingCall, caller, connection, callType } =
     useSelector((state: RootState) => state.call);
-  const { info } = useToast({ theme: 'dark' });
+  const { info } = useToast({ theme: 'light' });
   const { theme } = useSelector((state: RootState) => state.settings);
   const storageTheme = localStorage.getItem('theme') as SelectableTheme;
   useEffect(() => {

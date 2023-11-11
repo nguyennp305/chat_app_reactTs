@@ -42,7 +42,7 @@ export const MessagePanel: FC<Props> = ({
   const [content, setContent] = useState('');
   const { id: routeId } = useParams();
   const { user } = useContext(AuthContext);
-  const { error } = useToast({ theme: 'dark' });
+  const { error } = useToast({ theme: 'light' });
   const { attachments } = useSelector((state: RootState) => state.messagePanel);
   const conversation = useSelector((state: RootState) =>
     selectConversationById(state, parseInt(routeId!))

@@ -12,7 +12,7 @@ export function useFriendRequestReceived() {
   const socket = useContext(SocketContext);
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
-  const { info } = useToast({ theme: 'dark' });
+  const { info } = useToast({ theme: 'light' });
   useEffect(() => {
     socket.on('onFriendRequestReceived', (payload: FriendRequest) => {
       console.log('onFriendRequestReceived');

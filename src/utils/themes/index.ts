@@ -123,8 +123,8 @@ export const LightTheme: Theme = {
     secondary: '#636363',
   },
   userSidebar: {
-    backgroundColor: '#15161E',
-    color: '#fff',
+    backgroundColor: '#fff',
+    color: '#15161E',
   },
   conversationSidebar: {
     backgroundColor: '#fff',
@@ -142,7 +142,7 @@ export const LightTheme: Theme = {
   },
   messagePanel: {
     backgroundColor: '#ededed',
-    color: '#fff',
+    color: '#000',
     header: {
       title: '#000',
     },
@@ -164,8 +164,8 @@ export const LightTheme: Theme = {
     backgroundColor: '#fff',
   },
   input: {
-    backgroundColor: '#ececec',
-    color: '#595959',
+    backgroundColor: '#e3d8d8',
+    color: '#000',
   },
 };
 

@@ -17,7 +17,7 @@ type Props = {
 
 export const SendFriendRequestForm: FC<Props> = ({ setShowModal }) => {
   const [username, setUsername] = useState('');
-  const { success, error } = useToast({ theme: 'dark' });
+  const { success, error } = useToast({ theme: 'light' });
 
   const dispatch = useDispatch<AppDispatch>();
 

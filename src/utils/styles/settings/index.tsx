@@ -7,7 +7,7 @@ export const SettingsSidebarStyle = styled.aside`
   flex-direction: column;
   height: 100%;
   width: 300px;
-  background-color: #111111;
+  background-color: #fff;
   flex: 0 0 auto;
 `;
 
@@ -132,7 +132,7 @@ export const SettingsProfileUserDetails = styled.div`
     width: 150px;
     border-radius: 50%;
     border: 4px solid #292929;
-    background-color: #2a2a2a;
+    background-color: #fff;
   }
 
   & span {
@@ -149,7 +149,7 @@ export const ProfileSection = styled.div`
 `;
 
 export const ProfileAboutSection = styled.div`
-  background-color: #111111;
+  background-color: #fff;
   width: 500px;
   padding: 32px;
   box-sizing: border-box;
@@ -167,10 +167,10 @@ export const ProfileAboutSectionHeader = styled.div`
 `;
 
 export const ProfileDescriptionField = styled.textarea`
-  background-color: inherit;
+  background-color: #e3d8d8;
   outline: none;
   border: none;
-  color: #ffffff;
+  color: #000;
   font-family: 'Inter';
   box-sizing: border-box;
   font-size: 15px;
