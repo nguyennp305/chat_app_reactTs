@@ -29,6 +29,7 @@ import { CurrentCallPage } from "./pages/calls/CurrentCallPage";
 import { Test } from "./pages/test/Test";
 import { WelcomePage } from "./pages/WelcomePage";
 import { HeaderAllPages } from "./components/headers-al-pages/HeaderAllPages";
+import { PlatformPage } from "./pages/platform-page/home-page/PlatformPage";
 
 enableMapSet();
 
@@ -60,11 +61,12 @@ function App() {
     <AppWithProviders user={user} setUser={setUser} socket={socket}>
       {/* <HeaderAllPages /> */}
       <Routes>
-        <Route path="/" element={<LoginPage />} />
+        {/* <Route path="/" element={<LoginPage />} /> */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
           <Route path="/welcomePage" element={<WelcomePage />} />
         <Route element={<AuthenticatedRoute children={<AppPage />} />}>
+          <Route path='/' element={<PlatformPage />} />
           <Route path="conversations" element={<ConversationPage />}>
             <Route
               path=":id"

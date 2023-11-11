@@ -35,6 +35,7 @@ import { useVoiceCallAccepted } from '../utils/hooks/sockets/call/useVoiceCallAc
 import { useVoiceCallHangUp } from '../utils/hooks/sockets/call/useVoiceCallHangUp';
 import { useVoiceCallRejected } from '../utils/hooks/sockets/call/useVoiceCallRejected';
 import { HeaderAllPages } from '../components/headers-al-pages/HeaderAllPages';
+import { PlatformPage } from './platform-page/home-page/PlatformPage';
 
 export const AppPage = () => {
   const { user } = useContext(AuthContext);
@@ -192,6 +193,7 @@ export const AppPage = () => {
     >
       {isReceivingCall && caller && <CallReceiveDialog />}
       <HeaderAllPages />
+      {/* <PlatformPage /> */}
       <LayoutPage>
         <UserSidebar />
         <Outlet />

@@ -1,16 +1,93 @@
 .header-pages {
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // right: 0;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  width: 100%;
+  height: 8%;
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background: url("../../__assets__/header_imagepng.png") no-repeat;
+  box-shadow: 0 4px 10px -10px;
+  position: relative;
+  z-index: 10px;
+
+  .flex-header-row {
     width: 100%;
     display: flex;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    background: url('../../__assets__/header_imagepng.png') no-repeat;
-    box-shadow: 0 4px 10px -10px;
-    position: relative;
-    z-index: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    .flex-header-items-left {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      cursor: pointer;
+
+      .image-logo-header {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        display: block;
+        max-width: 100%;
+      }
+
+      .items-left-content {
+        line-height: 12px;
+        font-weight: 600;
+        color: #ea0621;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .text-mobile {
+          color: #0073a8;
+          font-size: 10px;
+          line-height: 9px;
+        }
+
+        .text-mobile-hide {
+          margin-top: 6px;
+        }
+      }
+    }
+
+    .flex-header-items-right {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+
+      .message-icon {
+        transition: transform 0.3s; /* Thêm hiệu ứng chuyển động */
+        cursor: pointer;
+        background-color: #e0e2e8;
+        border: 1px solid #e0e2e8;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        // align-content: center;
+        align-items: center;
+      }
+      .message-icon:hover {
+        transform: scale(1.2); /* Thay đổi kích thước khi hover */
+      }
+
+      .image-logo-message {
+        width: 100%;
+        height: 100%;
+        /* font-size: 0px; */
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+        display: block;
+        max-width: 100%;
+      }
+    }
+  }
 }

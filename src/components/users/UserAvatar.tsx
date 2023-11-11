@@ -7,9 +7,10 @@ import defaultAvatar from '../../__assets__/default_avatar.jpg';
 type Props = {
   user: User;
   onClick?: (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => void;
+  onContextMenu?: (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => void;
 };
 
-export const UserAvatar: FC<Props> = ({ user, onClick }) => {
+export const UserAvatar: FC<Props> = ({ user, onClick, onContextMenu }) => {
   const getProfilePicture = () => {
     const { profile } = user;
     return profile && profile.avatar
@@ -22,6 +23,7 @@ export const UserAvatar: FC<Props> = ({ user, onClick }) => {
       src={getProfilePicture()}
       alt="avatar"
       onClick={onClick}
+      onContextMenu={onContextMenu}
     />
   );
 };

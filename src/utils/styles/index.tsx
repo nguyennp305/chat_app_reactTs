@@ -314,6 +314,7 @@ export const MessageContainerStyle = styled.div`
   overflow-y: scroll;
   &::-webkit-scrollbar {
     width: 8px;
+    display: none;
   }
   &::-webkit-scrollbar-track {
     background-color: ${({ theme }) => theme.background.primary};
@@ -360,9 +361,14 @@ export const MessageInput = styled.input`
 export const MessageItemContainer = styled.div`
   display: flex;
   gap: 20px;
+  max-width: 70%;
   align-items: center;
-  padding: 5px 0;
+  padding: 16px 24px;
+  background: #fff;
   word-break: break-word;
+  border-radius: 20px 20px 20px;
+  box-shadow: 0 11px 15px #ffffff40, 0 9px 46px #ffffff26, 0 24px 38px #0000000d;
+  outline: transparent solid 1px;
 `;
 
 export const UserAvatarContainer = styled.img`
@@ -643,7 +649,7 @@ export const SelectedRecipientPillStyle = styled.div`
 `;
 
 export const LayoutPage = styled.div`
-  height: 100%;
+  height: 92%;
   display: flex;
 `;
 
@@ -900,7 +906,7 @@ export const SystemMessageContainer = styled.div`
   width: 80%;
   margin: 8px 0;
   box-sizing: border-box;
-  background-color: #1c1c1c;
+  background-color: #fff;
   padding: 12px 16px;
   border-radius: 8px;
   display: flex;
