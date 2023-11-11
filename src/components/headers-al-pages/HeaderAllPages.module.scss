@@ -1,14 +1,16 @@
 .header-pages {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
     width: 100%;
     display: flex;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    background: red;
+    background: url('../../__assets__/header_imagepng.png') no-repeat;
     box-shadow: 0 4px 10px -10px;
+    position: relative;
+    z-index: 10px;
 }

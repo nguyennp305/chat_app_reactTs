@@ -1,5 +1,5 @@
 import Dropdown from "react-bootstrap/Dropdown";
-import "./test.scss";
+import "./test.module.scss";
 import { useState, useRef, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 

@@ -123,7 +123,7 @@ export const LightTheme: Theme = {
     secondary: '#636363',
   },
   userSidebar: {
-    backgroundColor: '#fff',
+    backgroundColor: '#d9c5c5',
     color: '#15161E',
   },
   conversationSidebar: {

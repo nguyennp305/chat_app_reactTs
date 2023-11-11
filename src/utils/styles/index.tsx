@@ -666,6 +666,9 @@ export const SidebarStyle = styled.div`
   flex-direction: column;
   height: 100%;
   width: 400px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 7px 9px 10px 0px #636363;
   background-color: ${({ theme }: { theme: Theme }) =>
     theme.conversationSidebar.backgroundColor};
   flex: 0 0 auto;

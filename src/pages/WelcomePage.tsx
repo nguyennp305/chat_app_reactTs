@@ -11,7 +11,7 @@ export const WelcomePage = () => {
     return (
         <WelcomeImage>
             <Container className="d-flex align-items-center w-100 h-100">
-                <Row style={{width: '600px'}}>
+                <Row style={{width: '600px', color: '#fff'}}>
                     <p className="text-lg" style={{fontSize: '1.5rem'}}>Chào mừng đến với phần mềm</p>
                     <p style={{fontSize: '2rem', fontWeight: 'bold', lineHeight: '2.2rem',textTransform: 'uppercase'}}>TRỢ LÝ ẢO DÀNH CHO CÁC BẠN SINH VIÊN UET</p>
                     <p className="text-base md:text-xl" style={{fontSize: '1.25rem'}}>Tại đây các bạn sinh viên có thể tra cứu các thông tin về trường, lớp, câu lạc bộ, nghiên cứu khoa học, đặt câu hỏi thảo luận, lên kế hoạch và quản lý các sự kiện</p>

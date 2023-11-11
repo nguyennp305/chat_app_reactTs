@@ -1,4 +1,4 @@
-import { PropsWithChildren, useState } from "react";
+import { PropsWithChildren, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Socket } from "socket.io-client";
 import { AuthenticatedRoute } from "./components/AuthenticatedRoute";
@@ -58,13 +58,13 @@ function App() {
   const [user, setUser] = useState<User>();
   return (
     <AppWithProviders user={user} setUser={setUser} socket={socket}>
-      <HeaderAllPages />
+      {/* <HeaderAllPages /> */}
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route element={<AuthenticatedRoute children={<AppPage />} />}>
           <Route path="/welcomePage" element={<WelcomePage />} />
+        <Route element={<AuthenticatedRoute children={<AppPage />} />}>
           <Route path="conversations" element={<ConversationPage />}>
             <Route
               path=":id"
