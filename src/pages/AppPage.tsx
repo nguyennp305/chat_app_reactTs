@@ -180,24 +180,10 @@ export const AppPage = () => {
   }, [connection]);
 
   return (
-    <ThemeProvider
-      theme={
-        storageTheme
-          ? storageTheme === 'dark'
-            ? DarkTheme
-            : LightTheme
-          : theme === 'dark'
-          ? DarkTheme
-          : LightTheme
-      }
-    >
+    <>
       {isReceivingCall && caller && <CallReceiveDialog />}
-      {/* <HeaderAllPages /> */}
-      {/* <PlatformPage /> */}
-      <LayoutPage>
         <UserSidebar />
         <Outlet />
-      </LayoutPage>
-    </ThemeProvider>
+    </>
   );
 };

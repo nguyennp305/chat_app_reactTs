@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../store";
 import { ThemeProvider } from "styled-components";
 import { DarkTheme, LightTheme } from "../utils/themes";
+import { LayoutPage } from "../utils/styles";
 
 export const AuthenticatedRoute: FC<React.PropsWithChildren> = ({
   children,
@@ -22,20 +23,19 @@ export const AuthenticatedRoute: FC<React.PropsWithChildren> = ({
   if (user)
     return (
       <ThemeProvider
-      theme={
-        storageTheme
-          ? storageTheme === "dark"
+        theme={
+          storageTheme
+            ? storageTheme === "dark"
+              ? DarkTheme
+              : LightTheme
+            : theme === "dark"
             ? DarkTheme
             : LightTheme
-          : theme === "dark"
-          ? DarkTheme
-          : LightTheme
-      }
-    >
-      <HeaderAllPages />
-        {children}
+        }
+      >
+        <HeaderAllPages />
+        <LayoutPage>{children}</LayoutPage>
       </ThemeProvider>
-      
     );
   return <Navigate to="/login" state={{ from: location }} replace />;
 };

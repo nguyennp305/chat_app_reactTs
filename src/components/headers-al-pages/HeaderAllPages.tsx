@@ -8,14 +8,17 @@ export const HeaderAllPages = () => {
   // nếu là màn mobile <= 500 thì mất dòng trợ lý ảo
   const windowWidth = useRef(window.innerWidth);
   const navigate = useNavigate()
-  const changeRoute = () => {
+  const changeRouteMessage = () => {
       navigate('/messages/conversations')
   }
+  const changeRouteHome = () => {
+    navigate('/')
+}
   //  console.log('width: ', windowWidth.current);
   return (
     <div className={styles["header-pages"]}>
       <div className={styles["flex-header-row"]}>
-        <div className={styles["flex-header-items-left"]}>
+        <div className={styles["flex-header-items-left"]} onClick={changeRouteHome}>
           <img
             className={styles["image-logo-header"]}
             src={LogoUet}
@@ -31,8 +34,8 @@ export const HeaderAllPages = () => {
           </div>
         </div>
         <div className={styles["flex-header-items-right"]}>
-            <button onClick={changeRoute} className={styles["message-icon"]}><BsMessenger className={styles["image-logo-message"]} /></button>
-            <button onClick={changeRoute} className={styles["message-icon"]}><BsMessenger className={styles["image-logo-message"]} /></button>
+            <button onClick={changeRouteMessage} className={styles["message-icon"]}><BsMessenger className={styles["image-logo-message"]} /></button>
+            <button onClick={changeRouteMessage} className={styles["message-icon"]}><BsMessenger className={styles["image-logo-message"]} /></button>
         </div>
       </div>
     </div>

@@ -651,6 +651,7 @@ export const SelectedRecipientPillStyle = styled.div`
 export const LayoutPage = styled.div`
   height: 92%;
   display: flex;
+  margin-top: 10px;
 `;
 
 export const UserSidebarStyle = styled.div`
