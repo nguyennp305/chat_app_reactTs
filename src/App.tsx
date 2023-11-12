@@ -64,7 +64,9 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/welcomePage" element={<WelcomePage />} />
-        {/* <Route element={<AuthenticatedRoute children={<PlatformPage />} />} /> */}
+        {/* page home */}
+        <Route path="/" element={<AuthenticatedRoute children={<PlatformPage />} />} />
+        {/* pages messages */}
         <Route path="/messages" element={<AuthenticatedRoute children={<AppPage />} />}>
           {/* <Route path='/' element={<PlatformPage />} /> */}
           <Route path="conversations" element={<ConversationPage />}>
@@ -93,6 +95,7 @@ function App() {
             <Route path="current" element={<CurrentCallPage />} />
           </Route>
         </Route>
+        {/* page test */}
         <Route path="/test" element={<Test />} />
       </Routes>
       <ToastContainer theme="dark" />

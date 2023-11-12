@@ -192,7 +192,7 @@ export const AppPage = () => {
       }
     >
       {isReceivingCall && caller && <CallReceiveDialog />}
-      <HeaderAllPages />
+      {/* <HeaderAllPages /> */}
       {/* <PlatformPage /> */}
       <LayoutPage>
         <UserSidebar />

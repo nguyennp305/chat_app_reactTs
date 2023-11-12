@@ -54,7 +54,7 @@ export const CreateConversationForm: FC<Props> = ({ setShowModal }) => {
         console.log(data);
         console.log('done');
         setShowModal(false);
-        navigate(`/conversations/${data.id}`);
+        navigate(`/messages/conversations/${data.id}`);
       })
       .catch((err) => console.log(err));
   };

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export const WelcomePage = () => {
     const navigate = useNavigate()
     const changeRoute = () => {
-        navigate('/messages/conversations')
+        navigate('/')
     }
     return (
         <WelcomeImage>
