@@ -21,7 +21,7 @@ export function useFriendRequestReceived() {
       info(`Incoming Friend Request from ${payload.sender.firstName}`, {
         position: 'bottom-left',
         icon: IoMdPersonAdd,
-        onClick: () => navigate('/friends/requests'),
+        onClick: () => navigate('/messages/friends/requests'),
       });
     });
 

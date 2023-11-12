@@ -1,5 +1,13 @@
+import { Outlet } from "react-router-dom";
+import { UserSidebar } from "../../../components/sidebars/UserSidebar";
+import { LayoutPage } from "../../../utils/styles";
+
 export const MessageChatPage = () => {
-    return (
-        <div>MessageChatpage</div>
-    )
+  return (
+    <LayoutPage>
+        <div>mnguen</div>
+      <UserSidebar />
+      <Outlet />
+    </LayoutPage>
+  );
 };

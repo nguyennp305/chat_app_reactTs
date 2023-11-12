@@ -17,8 +17,8 @@ export const ConversationTab = () => {
   const dispatch = useDispatch<AppDispatch>();
   const onSelectType = (chat: ConversationTypeData) => {
     dispatch(updateType(chat.type));
-    if (chat.type === 'group') navigate('/groups');
-    else navigate('/conversations');
+    if (chat.type === 'group') navigate('/messages/groups');
+    else navigate('/messages/conversations');
   };
   return (
     <ConversationTabStyle>

@@ -89,7 +89,7 @@ export const AppPage = () => {
           {
             position: 'bottom-left',
             icon: BsFillPersonCheckFill,
-            onClick: () => navigate('/friends'),
+            onClick: () => navigate('/messages/friends'),
           }
         );
       }

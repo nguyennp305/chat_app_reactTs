@@ -91,7 +91,7 @@ export const GroupPage = () => {
       dispatch(removeGroup(payload.group));
       if (id && parseInt(id) === payload.group.id) {
         console.log('Navigating User to /groups');
-        navigate('/groups');
+        navigate('/messages/groups');
       }
     });
 
@@ -103,7 +103,7 @@ export const GroupPage = () => {
         if (userId === user?.id) {
           console.log('payload.userId matches user.id...');
           dispatch(removeGroup(group));
-          navigate('/groups');
+          navigate('/messages/groups');
         }
       }
     );

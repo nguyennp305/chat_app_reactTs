@@ -8,7 +8,7 @@ export const FriendsLayoutPage = () => {
   return (
     <FriendsPageStyle>
       <FriendPageNavbar />
-      {pathname === '/friends' && <FriendsPage />}
+      {pathname === '/messages/friends' && <FriendsPage />}
       <Outlet />
     </FriendsPageStyle>
   );

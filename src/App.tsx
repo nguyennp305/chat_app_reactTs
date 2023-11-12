@@ -61,12 +61,12 @@ function App() {
     <AppWithProviders user={user} setUser={setUser} socket={socket}>
       {/* <HeaderAllPages /> */}
       <Routes>
-        {/* <Route path="/" element={<LoginPage />} /> */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-          <Route path="/welcomePage" element={<WelcomePage />} />
-        <Route element={<AuthenticatedRoute children={<AppPage />} />}>
-          <Route path='/' element={<PlatformPage />} />
+        <Route path="/welcomePage" element={<WelcomePage />} />
+        {/* <Route element={<AuthenticatedRoute children={<PlatformPage />} />} /> */}
+        <Route path="/messages" element={<AuthenticatedRoute children={<AppPage />} />}>
+          {/* <Route path='/' element={<PlatformPage />} /> */}
           <Route path="conversations" element={<ConversationPage />}>
             <Route
               path=":id"

@@ -41,40 +41,40 @@ export const friendsNavbarItems = [
   {
     id: 'friends',
     label: 'Friends',
-    pathname: '/friends',
+    pathname: '/messages/friends',
   },
   {
     id: 'requests',
     label: 'Requests',
-    pathname: '/friends/requests',
+    pathname: '/messages/friends/requests',
   },
   {
     id: 'blocked',
     label: 'Blocked',
-    pathname: '/friends/blocked',
+    pathname: '/messages/friends/blocked',
   },
 ];
 
 export const userSidebarItems: UserSidebarItemType[] = [
   {
     id: 'conversations',
-    pathname: '/conversations',
+    pathname: '/messages/conversations',
   },
   {
     id: 'friends',
-    pathname: '/friends',
+    pathname: '/messages/friends',
   },
   {
     id: 'connections',
-    pathname: '/connections',
+    pathname: '/messages/connections',
   },
   {
     id: 'settings',
-    pathname: '/settings',
+    pathname: '/messages/settings',
   },
   {
     id: 'calls',
-    pathname: '/calls',
+    pathname: '/messages/calls',
   },
 ];
 
@@ -82,27 +82,27 @@ export const settingsItems: SettingsItemType[] = [
   {
     id: 'profile',
     label: 'Profile',
-    pathname: '/settings/profile',
+    pathname: '/messages/settings/profile',
   },
   {
     id: 'security',
     label: 'Security',
-    pathname: '/settings/security',
+    pathname: '/messages/settings/security',
   },
   {
     id: 'notifications',
     label: 'Notifications',
-    pathname: '/settings/notifications',
+    pathname: '/messages/settings/notifications',
   },
   {
     id: 'integrations',
     label: 'Integrations',
-    pathname: '/settings/integrations',
+    pathname: '/messages/settings/integrations',
   },
   {
     id: 'appearance',
     label: 'Appearance',
-    pathname: '/settings/appearance',
+    pathname: '/messages/settings/appearance',
   },
 ];
 
